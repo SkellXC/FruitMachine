@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Threading;
 namespace FruitMachine
 {
     public partial class Form1 : Form
@@ -60,16 +60,17 @@ namespace FruitMachine
             {
                 foreach (Image image in images)
                 {
-                    pictureBox1.Image = image;
-                    pictureBox1.Refresh();
+                    //pictureBox1.Image = image;
+                    //pictureBox1.Refresh();
                     //await Task.Delay(200);
+                    Random random = new Random();
+                    int index = random.Next(images.Count);
+                    Image randomImage = images[index];
+                    e.Graphics.DrawImage(randomImage, 50, 50, 90, 90);
+                    Thread.Sleep(100);
                 }
             }
-            
-            Random random = new Random();
-            int index = random.Next(images.Count);
-            Image randomImage = images[index];
-            e.Graphics.DrawImage(randomImage, 50, 50, 90, 90);
-        }
+        }   
+
     }
 }
