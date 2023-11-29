@@ -1,0 +1,767 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3E55DB64-D0D7-4A6D-B424-AD2BD8C4871B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>FruitMachine</RootNamespace>
+    <AssemblyName>FruitMachine</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resource1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource1.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Resource1.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile000.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile001.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile002.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile003.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile004.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile005.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile006.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile007.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile008.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile009.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile010.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile011.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile012.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile013.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile014.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile015.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile016.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile017.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile018.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile019.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile020.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile021.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile022.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile023.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile024-Pearl.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile025.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile026.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile027.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile028.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile029.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile030.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile031.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile032.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile033.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile034.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile035.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile036.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile037.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile038.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile039.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile040.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile041.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile042.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile043.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile044.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile045.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile046.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile047.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile048.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile049.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile050.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile051.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile052.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile053.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile054.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile055.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile056.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile057.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile058.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile059.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile060.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile061.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile062.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile063.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile064.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile065.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile066.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile067.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile068.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile069.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile070.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile071.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile072.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile073.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile074.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile075.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile076.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile077.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile078.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile079.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile080.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile081.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile082.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile083.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile084.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile085.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile086.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile087.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile088.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile089.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile090.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile091.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile092.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile093.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile094.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile095.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile096.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile097.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile098.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile099.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile101.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile102.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile103.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile104.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile105.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile106.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile107.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile108.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile109.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile110.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile111.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile112.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile113.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile114.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile115.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile116.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile117.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile118.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile119.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile120.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile121.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile122.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile123.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile124.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile125.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile126.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile127.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile129.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile130.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile131.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile132.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile133.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile134.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile135.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile136.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile137.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile138.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile139.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile140.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile141.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile142.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile143.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile144.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile145.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile146.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile147.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile148.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile149.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile150.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile151.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile152.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile153.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile154.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile155.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile156.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile157.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile158.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile159.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile160.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile161.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile162.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile163.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile164.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile165.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile166.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile167.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile168.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile169.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile170.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile171.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile172.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile173.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile174.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile175.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile176.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile177.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile178.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile179.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile180.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile181.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile182.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile183.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile184.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile185.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile186.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile187.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile188.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile189.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile190.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile191.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile192.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile193.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile194.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile195.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile196.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile197.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile198.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile199.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile200.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile201.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile202.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile203.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile204.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile205.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile206.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile207.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile208.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile209.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile210.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile211.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile212.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile213.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile214.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile215.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile216.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile217.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile218.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile219.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile220.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile221.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile222.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile223.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile224.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
