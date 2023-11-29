@@ -12,6 +12,8 @@ namespace FruitMachine
 {
     public partial class Form1 : Form
     {
+        static Image pearl = FruitMachine.Resource1.tile024_Pearl;
+
         public Form1()
         {
             InitializeComponent();
@@ -29,7 +31,8 @@ namespace FruitMachine
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-
+            //pictureBox1.Image = pearl;
+            //e.Graphics.DrawImage(pearl, 50, 50, 10, 10);
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -40,6 +43,12 @@ namespace FruitMachine
         private void pictureBox3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void pictureBox1_Paint(object sender, PaintEventArgs e)
+        {
+            //pictureBox1.Image = pearl;
+            e.Graphics.DrawImage(pearl, 50, 50, 10, 10)
         }
     }
 }
