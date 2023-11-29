@@ -65,6 +65,7 @@
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.pictureBox2.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBox2_Paint);
             // 
             // pictureBox3
             // 
@@ -74,6 +75,7 @@
             this.pictureBox3.TabIndex = 3;
             this.pictureBox3.TabStop = false;
             this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            this.pictureBox3.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBox3_Paint);
             // 
             // Form1
             // 
