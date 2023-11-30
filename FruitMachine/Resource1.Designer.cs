@@ -63,6 +63,26 @@ namespace FruitMachine {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap backgroundPic {
+            get {
+                object obj = ResourceManager.GetObject("backgroundPic", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap graveyard {
+            get {
+                object obj = ResourceManager.GetObject("graveyard", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap tile000 {
             get {
                 object obj = ResourceManager.GetObject("tile000", resourceCulture);

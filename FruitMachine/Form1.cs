@@ -20,7 +20,12 @@ namespace FruitMachine
         static Image ruby = FruitMachine.Resource1.tile009;
         static Image blackPrism = FruitMachine.Resource1.tile067;
         static Image passionFruit = FruitMachine.Resource1.tile127;
-        List<Image> images = new List<Image>()
+        //static Image[] images = new Image[7];
+        static Image[] images = { pearl, rainbowPearl, rainbowBall, slime, ruby, blackPrism, passionFruit };
+ 
+
+
+        List<Image> pictures = new List<Image>()
         {
             pearl,
             rainbowPearl,
@@ -63,20 +68,13 @@ namespace FruitMachine
         }
         private async void pictureBox1_Paint(object sender, PaintEventArgs e)
         {
-            Random random = new Random();
-            
-            //List<Image> shuffledImages = images.OrderBy(x => random.Next()).ToList();
-            int index = random.Next(0, images.Count);
-            foreach (Image randomImage in images)
+            for (int i = 0; i < images.Length; i++)
             {
-                try
-                {
-                    e.Graphics.DrawImage(images[index], 50, 50, 90, 90);
-                }
-                catch (ArgumentException ex) { }
+                pictureBox1.BackgroundImage = images[i];
+                //Image.BackgroundImageLayout = ImageLayout.Stretch;
+                pictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
+                await Task.Delay(1000);
 
-                await Task.Delay(2000); // Use Task.Delay instead of sleep
-                pictureBox1.Invalidate();
             }
         }
         private async Task sleep(int time)
@@ -88,13 +86,13 @@ namespace FruitMachine
         {
             Random random = new Random();
 
-            //List<Image> shuffledImages = images.OrderBy(x => random.Next()).ToList();
-            int index = random.Next(0, images.Count);
-            for(int i = 0; i < images.Count; i++)
-            {
+
+            
+            for(int i = 0; i < images.Length; i++)
+            {   //int index = random.Next(0, images.Count);
                 try
                 {
-                    e.Graphics.DrawImage(images[index], 50, 50, 90, 90);
+                    e.Graphics.DrawImage(images[i], 50, 50, 90, 90);
                 }
                 catch (ArgumentException ex) { }
 
@@ -107,20 +105,33 @@ namespace FruitMachine
         {
             Random random = new Random();
 
-            List<Image> shuffledImages = images.OrderBy(x => random.Next()).ToList();
-
-            foreach (Image randomImage in shuffledImages)
+            //int index = random.Next(0, images.Length);
+            for (int i = 0; i < images.Length; i++)
             {
                 try
                 {
-                    e.Graphics.DrawImage(randomImage, 50, 50, 90, 90);
+                    e.Graphics.DrawImage(images[i], 50, 50, 90, 90);
                 }
                 catch (ArgumentException ex) { }
 
                 await Task.Delay(2000); // Use Task.Delay instead of sleep
                 pictureBox3.Invalidate();
             }
-        
+        }
+
+        // Method to resize PictureBox control to fit the image automatically
+        private void ResizePictureBox(PictureBox pictureBox)
+        {
+            if (pictureBox.Image != null)
+            {
+                pictureBox.SizeMode = PictureBoxSizeMode.AutoSize;
+                pictureBox.ClientSize = new Size(pictureBox.Image.Width, pictureBox.Image.Height);
+            }
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            
         }
     }
 }
