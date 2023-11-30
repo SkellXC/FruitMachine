@@ -51,10 +51,8 @@ namespace FruitMachine
         {
 
         }
-        private bool cancelPaint = false;
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            cancelPaint = true;
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -66,72 +64,74 @@ namespace FruitMachine
         {
 
         }
-        private async void pictureBox1_Paint(object sender, PaintEventArgs e)
+        private void pictureBox1_Paint(object sender, PaintEventArgs e)
         {
-            for (int i = 0; i < images.Length; i++)
-            {
-                pictureBox1.BackgroundImage = images[i];
-                //Image.BackgroundImageLayout = ImageLayout.Stretch;
+ 
                 pictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
-                await Task.Delay(1000);
-
-            }
-        }
-        private async Task sleep(int time)
-        {
-            await Task.Delay(time); // Time is in ms
-        }
-
-        private async void pictureBox2_Paint(object sender, PaintEventArgs e)
-        {
-            Random random = new Random();
-
-
             
-            for(int i = 0; i < images.Length; i++)
-            {   //int index = random.Next(0, images.Count);
-                try
-                {
-                    e.Graphics.DrawImage(images[i], 50, 50, 90, 90);
-                }
-                catch (ArgumentException ex) { }
-
-                await Task.Delay(2000); // Use Task.Delay instead of sleep
-                pictureBox2.Invalidate();
-            }
         }
 
-        private async void pictureBox3_Paint(object sender, PaintEventArgs e)
+
+        private void pictureBox2_Paint(object sender, PaintEventArgs e)
         {
-            Random random = new Random();
-
-            //int index = random.Next(0, images.Length);
-            for (int i = 0; i < images.Length; i++)
-            {
-                try
-                {
-                    e.Graphics.DrawImage(images[i], 50, 50, 90, 90);
-                }
-                catch (ArgumentException ex) { }
-
-                await Task.Delay(2000); // Use Task.Delay instead of sleep
-                pictureBox3.Invalidate();
-            }
+           pictureBox2.BackgroundImageLayout = ImageLayout.Stretch;
         }
 
-        // Method to resize PictureBox control to fit the image automatically
-        private void ResizePictureBox(PictureBox pictureBox)
-        {
-            if (pictureBox.Image != null)
+        private void pictureBox3_Paint(object sender, PaintEventArgs e)
             {
-                pictureBox.SizeMode = PictureBoxSizeMode.AutoSize;
-                pictureBox.ClientSize = new Size(pictureBox.Image.Width, pictureBox.Image.Height);
-            }
+            pictureBox3.BackgroundImageLayout = ImageLayout.Stretch;
         }
-
+            
+        static int len = images.Length;
+        static int pos1 = 1;
+        static int pos2 = 3;
+        static int pos3 = 5;
         private void timer1_Tick(object sender, EventArgs e)
         {
-            
+            pictureBox1.BackgroundImage = images[pos1];
+            if (pos1 == 0)
+            {
+                pb1Top.BackgroundImage = images[(pos1 + len - 1) % len];
+                pb1Top.BackgroundImage = images[len - 1];
+            }
+            else
+            {
+                pb1Top.BackgroundImage = images[pos1 - 1];
+            }
+            //pb1Top.BackgroundImage = images[(pos1-1)%len];// Figure out how to get the previous item in the array
+            pos1 = (pos1 + 1) % images.Length;
+        }
+
+        
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            pictureBox2.BackgroundImage = images[(pos2 + 1) % len];
+            pos2 = (pos2 + 1) % images.Length;
+        }
+        private void timer3_Tick(object sender, EventArgs e)
+        {
+            pictureBox3.BackgroundImage = images[(pos3 + 1) % len];
+            pos3 = (pos3 + 1) % images.Length;
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pb1Top_Paint(object sender, PaintEventArgs e)
+        {
+            pb1Top.BackgroundImageLayout = ImageLayout.Stretch;
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
