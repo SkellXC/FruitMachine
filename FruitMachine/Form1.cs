@@ -21,9 +21,13 @@ namespace FruitMachine
         static Image blackPrism = FruitMachine.Resource1.tile067;
         static Image passionFruit = FruitMachine.Resource1.tile127;
         static Image[] images = { pearl, rainbowPearl, rainbowBall, slime, ruby, blackPrism, passionFruit };
- 
 
-        static Image[] check = new Image[2];
+        static int len = images.Length;
+        static int pos1 = 1;
+        static int pos2 = 2;
+        static int pos3 = 3;
+
+        static int gold = 1_000;
 
         public Form1()
         {
@@ -38,12 +42,9 @@ namespace FruitMachine
         private void StartButton_Click(object sender, EventArgs e)
         {
             timer1.Enabled = !(timer1.Enabled);
-            Image box1 = pictureBox1.BackgroundImage;
-            //Console.WriteLine('a');
-            check.Append(box1);
             label1.Text = "a";
+            
         }
-
 
         private void pictureBox2_Paint(object sender, PaintEventArgs e)
         {
@@ -51,14 +52,11 @@ namespace FruitMachine
         }
 
         private void pictureBox3_Paint(object sender, PaintEventArgs e)
-            {
+        {
             pictureBox3.BackgroundImageLayout = ImageLayout.Stretch;
         }
             
-        static int len = images.Length;
-        static int pos1 = 1;
-        static int pos2 = 3;
-        static int pos3 = 5;
+
         private void timer1_Tick(object sender, EventArgs e)
         {
             pictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
@@ -69,17 +67,14 @@ namespace FruitMachine
             if (pos1 == 0)// sets the index to the last item when pos1 is the first item
             {
                 pb1Top.BackgroundImage = images[len - 1];
-                
-
             }
             else { pb1Top.BackgroundImage = images[pos1 - 1];}// Handles regular for top
+
             pb1Bottom.BackgroundImage = images[(pos1 + 1) % len];// Bottom one
 
             pos1 = (pos1 + 1) % images.Length;
-
         }
 
-        
         private void timer2_Tick(object sender, EventArgs e)
         {
             pictureBox2.BackgroundImage = images[(pos2 + 1) % len];
@@ -91,42 +86,21 @@ namespace FruitMachine
             pos3 = (pos3 + 1) % images.Length;
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
-        private void pb1Bottom_Paint(object sender, PaintEventArgs e)
-        {
-           
-        }
-
-        private void pb1Top_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             timer2.Enabled = !(timer2.Enabled);
-            Image box2 = pictureBox2.BackgroundImage;
-            //Console.WriteLine('a');
-            check.Append(box2);
-
-            label1.Text = sameCheck(check).ToString();
         }
 
-        private bool sameCheck(Image[] check)
+        private void button2_Click(object sender, EventArgs e)
         {
-            return check[0] != check[1];
+            timer3.Enabled = !(timer3.Enabled);
         }
 
+        private void boolcheck_Tick(object sender, EventArgs e)
+        {
+            label1.Text = label1.Text = (pos1 == pos2 + 1).ToString();// Box 1 and 2 are the same
+            label2.Text = label2.Text = (pos2 == pos3).ToString();// Box 2 and 3 are the same
+            label3.Text = label3.Text = (pos1 == pos3+1).ToString();// Box 1 and 3 are the same
+        }
     }
 }
