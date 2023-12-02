@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Timers;
 using System.Windows.Forms;
 using System.Threading;
+using System.Reflection;
+
 namespace FruitMachine
 {
     public partial class Form1 : Form
@@ -20,6 +22,7 @@ namespace FruitMachine
         static Image ruby = FruitMachine.Resource1.tile009;
         static Image blackPrism = FruitMachine.Resource1.tile067;
         static Image passionFruit = FruitMachine.Resource1.tile127;
+        static Image startbg = FruitMachine.Resource1.tile190;
         static Image[] images = { pearl, rainbowPearl, rainbowBall, slime, ruby, blackPrism, passionFruit };
 
         static int len = images.Length;
@@ -36,43 +39,22 @@ namespace FruitMachine
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
         }
 
         private void StartButton_Click(object sender, EventArgs e)
         {
             timer1.Enabled = !(timer1.Enabled);
-            label1.Text = "a";
-            
         }
-
-        private void pictureBox2_Paint(object sender, PaintEventArgs e)
-        {
-           pictureBox2.BackgroundImageLayout = ImageLayout.Stretch;
-        }
-
-        private void pictureBox3_Paint(object sender, PaintEventArgs e)
-        {
-            pictureBox3.BackgroundImageLayout = ImageLayout.Stretch;
-        }
-            
-
+           
         private void timer1_Tick(object sender, EventArgs e)
         {
-            pictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
-            pb1Top.BackgroundImageLayout = ImageLayout.Stretch;
-            pb1Bottom.BackgroundImageLayout = ImageLayout.Stretch;
-
             pictureBox1.BackgroundImage = images[pos1];// Middle one
-            if (pos1 == 0)// sets the index to the last item when pos1 is the first item
-            {
-                pb1Top.BackgroundImage = images[len - 1];
-            }
-            else { pb1Top.BackgroundImage = images[pos1 - 1];}// Handles regular for top
+
+            pb1Top.BackgroundImage = images[((pos1 ==0)? len : pos1)-1];// Top one
+            //sets the index to the last item when pos1 is the first item
 
             pb1Bottom.BackgroundImage = images[(pos1 + 1) % len];// Bottom one
-
-            pos1 = (pos1 + 1) % images.Length;
+            pos1 = (pos1 + 1) % images.Length;// Increments it
         }
 
         private void timer2_Tick(object sender, EventArgs e)
@@ -95,8 +77,12 @@ namespace FruitMachine
         {
             timer3.Enabled = !(timer3.Enabled);
         }
+        private void bet(ref int gold, int amount)
+        {
+            gold -= amount;
+        }
 
-        private void boolcheck_Tick(object sender, EventArgs e)
+        private void boolcheck_Tick(object sender, EventArgs e)// Run checks in here
         {
             label1.Text = label1.Text = (pos1 == pos2 + 1).ToString();// Box 1 and 2 are the same
             label2.Text = label2.Text = (pos2 == pos3).ToString();// Box 2 and 3 are the same

@@ -39,25 +39,24 @@
             this.timer3 = new System.Windows.Forms.Timer(this.components);
             this.pb1Top = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pb1Bottom = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.boolcheck = new System.Windows.Forms.Timer(this.components);
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb1Top)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb1Bottom)).BeginInit();
             this.SuspendLayout();
             // 
             // StartButton
             // 
             this.StartButton.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.StartButton.Location = new System.Drawing.Point(201, 558);
+            this.StartButton.Location = new System.Drawing.Point(366, 558);
             this.StartButton.Name = "StartButton";
             this.StartButton.Size = new System.Drawing.Size(150, 89);
             this.StartButton.TabIndex = 0;
@@ -68,7 +67,9 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Location = new System.Drawing.Point(201, 193);
+            this.pictureBox1.BackgroundImage = global::FruitMachine.Resource1.tile190;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(366, 199);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(150, 150);
             this.pictureBox1.TabIndex = 1;
@@ -77,23 +78,25 @@
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Location = new System.Drawing.Point(512, 193);
+            this.pictureBox2.BackgroundImage = global::FruitMachine.Resource1.tile190;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.Location = new System.Drawing.Point(692, 199);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(150, 150);
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
-            this.pictureBox2.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBox2_Paint);
             // 
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.BackgroundImage = global::FruitMachine.Resource1.tile190;
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox3.InitialImage = global::FruitMachine.Resource1.tile000;
-            this.pictureBox3.Location = new System.Drawing.Point(802, 193);
+            this.pictureBox3.Location = new System.Drawing.Point(1007, 199);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(150, 150);
             this.pictureBox3.TabIndex = 3;
             this.pictureBox3.TabStop = false;
-            this.pictureBox3.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBox3_Paint);
             // 
             // timer1
             // 
@@ -106,9 +109,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(424, 183);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(13, 13);
+            this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 4;
-            this.label1.Text = "0";
+            this.label1.Text = "label1";
             // 
             // timer2
             // 
@@ -125,7 +128,8 @@
             // pb1Top
             // 
             this.pb1Top.BackColor = System.Drawing.Color.Transparent;
-            this.pb1Top.Location = new System.Drawing.Point(201, 9);
+            this.pb1Top.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pb1Top.Location = new System.Drawing.Point(366, 12);
             this.pb1Top.Name = "pb1Top";
             this.pb1Top.Size = new System.Drawing.Size(150, 150);
             this.pb1Top.TabIndex = 5;
@@ -140,19 +144,11 @@
             this.label6.Size = new System.Drawing.Size(0, 13);
             this.label6.TabIndex = 10;
             // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox4.Location = new System.Drawing.Point(201, 9);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(150, 75);
-            this.pictureBox4.TabIndex = 11;
-            this.pictureBox4.TabStop = false;
-            // 
             // pb1Bottom
             // 
             this.pb1Bottom.BackColor = System.Drawing.Color.Transparent;
-            this.pb1Bottom.Location = new System.Drawing.Point(201, 387);
+            this.pb1Bottom.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pb1Bottom.Location = new System.Drawing.Point(366, 388);
             this.pb1Bottom.Name = "pb1Bottom";
             this.pb1Bottom.Size = new System.Drawing.Size(150, 150);
             this.pb1Bottom.TabIndex = 12;
@@ -161,7 +157,7 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button1.Location = new System.Drawing.Point(512, 558);
+            this.button1.Location = new System.Drawing.Point(692, 558);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(150, 89);
             this.button1.TabIndex = 13;
@@ -181,7 +177,7 @@
             // button2
             // 
             this.button2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button2.Location = new System.Drawing.Point(802, 558);
+            this.button2.Location = new System.Drawing.Point(1007, 558);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(150, 89);
             this.button2.TabIndex = 15;
@@ -203,19 +199,30 @@
             this.boolcheck.Enabled = true;
             this.boolcheck.Tick += new System.EventHandler(this.boolcheck_Tick);
             // 
+            // textBox1
+            // 
+            this.textBox1.AccessibleName = "";
+            this.textBox1.BackColor = System.Drawing.Color.SkyBlue;
+            this.textBox1.Location = new System.Drawing.Point(42, 115);
+            this.textBox1.MinimumSize = new System.Drawing.Size(0, 30);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(192, 20);
+            this.textBox1.TabIndex = 17;
+            this.textBox1.Text = "100";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::FruitMachine.Resource1.graveyard;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1159, 683);
+            this.ClientSize = new System.Drawing.Size(1338, 715);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pb1Bottom);
-            this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.pb1Top);
             this.Controls.Add(this.label1);
@@ -231,7 +238,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb1Top)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb1Bottom)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -250,13 +256,13 @@
         private System.Windows.Forms.Timer timer3;
         private System.Windows.Forms.PictureBox pb1Top;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pb1Bottom;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Timer boolcheck;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 
