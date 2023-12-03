@@ -15,6 +15,7 @@ using System.Runtime.InteropServices;
 /*Special item that when is used, slows down tick speed of other timers
  * Spend money
  * Buy upgrades (slows down tick speed minimally)
+ * Different icons or backgrounds
  * History of bets
  * Figure out how to do seperate pages to allow for a main menu and other stuff. Maybe new games?
  * Hyper link to my github 
@@ -57,8 +58,6 @@ namespace FruitMachine
         {
         }
 
-
-           
         private void timer1_Tick(object sender, EventArgs e)
         {
             pictureBox1.BackgroundImage = images[pos1];// Middle one
