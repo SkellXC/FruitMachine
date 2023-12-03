@@ -46,6 +46,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.boolcheck = new System.Windows.Forms.Timer(this.components);
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.goldLabel = new System.Windows.Forms.Label();
+            this.balanceText = new System.Windows.Forms.Label();
+            this.Spin = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -100,7 +104,6 @@
             // 
             // timer1
             // 
-            this.timer1.Enabled = true;
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
@@ -115,13 +118,11 @@
             // 
             // timer2
             // 
-            this.timer2.Enabled = true;
             this.timer2.Interval = 1000;
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
             // timer3
             // 
-            this.timer3.Enabled = true;
             this.timer3.Interval = 1000;
             this.timer3.Tick += new System.EventHandler(this.timer3_Tick);
             // 
@@ -147,6 +148,7 @@
             // pb1Bottom
             // 
             this.pb1Bottom.BackColor = System.Drawing.Color.Transparent;
+            this.pb1Bottom.BackgroundImage = global::FruitMachine.Resource1.tile009;
             this.pb1Bottom.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pb1Bottom.Location = new System.Drawing.Point(366, 388);
             this.pb1Bottom.Name = "pb1Bottom";
@@ -203,12 +205,57 @@
             // 
             this.textBox1.AccessibleName = "";
             this.textBox1.BackColor = System.Drawing.Color.SkyBlue;
-            this.textBox1.Location = new System.Drawing.Point(42, 115);
-            this.textBox1.MinimumSize = new System.Drawing.Size(0, 30);
+            this.textBox1.Location = new System.Drawing.Point(49, 399);
+            this.textBox1.MinimumSize = new System.Drawing.Size(4, 30);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(192, 20);
+            this.textBox1.Size = new System.Drawing.Size(192, 30);
             this.textBox1.TabIndex = 17;
             this.textBox1.Text = "100";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(39, 222);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(0, 13);
+            this.label4.TabIndex = 18;
+            // 
+            // goldLabel
+            // 
+            this.goldLabel.AutoSize = true;
+            this.goldLabel.BackColor = System.Drawing.Color.Transparent;
+            this.goldLabel.Font = new System.Drawing.Font("Old English Text MT", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.goldLabel.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.goldLabel.Location = new System.Drawing.Point(41, 45);
+            this.goldLabel.MinimumSize = new System.Drawing.Size(200, 100);
+            this.goldLabel.Name = "goldLabel";
+            this.goldLabel.Size = new System.Drawing.Size(200, 100);
+            this.goldLabel.TabIndex = 19;
+            this.goldLabel.Text = "1000";
+            this.goldLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // balanceText
+            // 
+            this.balanceText.AutoSize = true;
+            this.balanceText.BackColor = System.Drawing.Color.Transparent;
+            this.balanceText.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.balanceText.Location = new System.Drawing.Point(48, 60);
+            this.balanceText.Name = "balanceText";
+            this.balanceText.Size = new System.Drawing.Size(49, 13);
+            this.balanceText.TabIndex = 20;
+            this.balanceText.Text = "Balance:";
+            // 
+            // Spin
+            // 
+            this.Spin.BackColor = System.Drawing.Color.Transparent;
+            this.Spin.Location = new System.Drawing.Point(63, 504);
+            this.Spin.MinimumSize = new System.Drawing.Size(200, 100);
+            this.Spin.Name = "Spin";
+            this.Spin.Size = new System.Drawing.Size(200, 100);
+            this.Spin.TabIndex = 21;
+            this.Spin.Text = "Spin";
+            this.Spin.UseVisualStyleBackColor = false;
+            this.Spin.Click += new System.EventHandler(this.button3_Click);
             // 
             // Form1
             // 
@@ -217,6 +264,10 @@
             this.BackgroundImage = global::FruitMachine.Resource1.graveyard;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1338, 715);
+            this.Controls.Add(this.Spin);
+            this.Controls.Add(this.balanceText);
+            this.Controls.Add(this.goldLabel);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.button2);
@@ -263,6 +314,10 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Timer boolcheck;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label goldLabel;
+        private System.Windows.Forms.Label balanceText;
+        private System.Windows.Forms.Button Spin;
     }
 }
 
