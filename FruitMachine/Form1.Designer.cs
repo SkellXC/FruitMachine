@@ -104,7 +104,7 @@
             // 
             // timer1
             // 
-            this.timer1.Interval = 1000;
+            this.timer1.Interval = 500;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // label1
@@ -118,12 +118,10 @@
             // 
             // timer2
             // 
-            this.timer2.Interval = 1000;
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
             // timer3
             // 
-            this.timer3.Interval = 1000;
             this.timer3.Tick += new System.EventHandler(this.timer3_Tick);
             // 
             // pb1Top
@@ -199,16 +197,17 @@
             // boolcheck
             // 
             this.boolcheck.Enabled = true;
+            this.boolcheck.Interval = 50;
             this.boolcheck.Tick += new System.EventHandler(this.boolcheck_Tick);
             // 
             // textBox1
             // 
             this.textBox1.AccessibleName = "";
             this.textBox1.BackColor = System.Drawing.Color.SkyBlue;
-            this.textBox1.Location = new System.Drawing.Point(49, 399);
+            this.textBox1.Location = new System.Drawing.Point(63, 468);
             this.textBox1.MinimumSize = new System.Drawing.Size(4, 30);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(192, 30);
+            this.textBox1.Size = new System.Drawing.Size(200, 30);
             this.textBox1.TabIndex = 17;
             this.textBox1.Text = "100";
             // 
@@ -224,12 +223,12 @@
             // 
             this.goldLabel.AutoSize = true;
             this.goldLabel.BackColor = System.Drawing.Color.Transparent;
-            this.goldLabel.Font = new System.Drawing.Font("Old English Text MT", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.goldLabel.Font = new System.Drawing.Font("Old English Text MT", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.goldLabel.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.goldLabel.Location = new System.Drawing.Point(41, 45);
-            this.goldLabel.MinimumSize = new System.Drawing.Size(200, 100);
+            this.goldLabel.MinimumSize = new System.Drawing.Size(300, 150);
             this.goldLabel.Name = "goldLabel";
-            this.goldLabel.Size = new System.Drawing.Size(200, 100);
+            this.goldLabel.Size = new System.Drawing.Size(300, 150);
             this.goldLabel.TabIndex = 19;
             this.goldLabel.Text = "1000";
             this.goldLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -239,7 +238,7 @@
             this.balanceText.AutoSize = true;
             this.balanceText.BackColor = System.Drawing.Color.Transparent;
             this.balanceText.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.balanceText.Location = new System.Drawing.Point(48, 60);
+            this.balanceText.Location = new System.Drawing.Point(60, 88);
             this.balanceText.Name = "balanceText";
             this.balanceText.Size = new System.Drawing.Size(49, 13);
             this.balanceText.TabIndex = 20;
