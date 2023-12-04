@@ -101,7 +101,6 @@ namespace FruitMachine
                 box1 = false;
             }
 
-            
         }
         private void button1_Click(object sender, EventArgs e)
         {
@@ -136,8 +135,8 @@ namespace FruitMachine
                 //refreshBoxes();
             }
             label5.Text = pos1.ToString();
-            label7.Text = pos2.ToString();
-            label8.Text = pos3.ToString();
+            label7.Text = (pos2+1).ToString();
+            label8.Text = (pos3+1).ToString();
 
         }
 
@@ -160,8 +159,9 @@ namespace FruitMachine
         {
             bool oneTwo = pos1 == (pos2 + 1);
             bool twoThree = pos2 == pos3;
-            bool oneThree = pos1 == (pos3 + 1);
-            if (oneTwo && twoThree && oneThree)
+            bool oneThree = pos1 == ((pos3 + 1)%len);
+            bool lastOneThree = pos1 == 0 && pos3+1 == 7;// Doesn't work. Last one for box3 is 6/7 and the first box would be 0
+            if (oneTwo && twoThree && (oneThree || lastOneThree))
             {
                 gold += Int32.Parse(textBox1.Text) * 3;
             }
