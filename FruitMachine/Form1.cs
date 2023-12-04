@@ -38,8 +38,10 @@ namespace FruitMachine
         static Image blackPrism = FruitMachine.Resource1.tile067;
         static Image passionFruit = FruitMachine.Resource1.tile127;
         static Image startbg = FruitMachine.Resource1.tile190;
+        
         static Image[] images = { pearl, rainbowPearl, rainbowBall, slime, ruby, blackPrism, passionFruit };
-
+        //static Image[] images = { rainbowBall, passionFruit, blackPrism, slime, rainbowPearl, ruby, pearl };
+        //static Image[] images = { pearl, slime, rainbowPearl, passionFruit, rainbowBall, ruby, blackPrism };
         static int len = images.Length;
         static int pos1 = 1;
         static int pos2 = 2;
@@ -71,12 +73,19 @@ namespace FruitMachine
 
         private void timer2_Tick(object sender, EventArgs e)
         {
-            pictureBox2.BackgroundImage = images[(pos2 + 1) % len];
+
+            pictureBox2.BackgroundImage = images[(pos2 + 1) % len];// Middle
+
+            pb2Top.BackgroundImage = images[((pos2 +1) == 0) ? len : (pos2+1) - 1];// Top
+            pb2Bottom.BackgroundImage = images[(pos2 + 1 + 1) % len];// Bottom
+
             pos2 = (pos2 + 1) % images.Length;
         }
         private void timer3_Tick(object sender, EventArgs e)
         {
-            pictureBox3.BackgroundImage = images[(pos3 + 1) % len];
+            pictureBox3.BackgroundImage = images[(pos3 + 1) % len];//Middle
+            pb3Top.BackgroundImage = images[((pos3+ 1 == 0) ? len : pos3+1) - 1];// Top
+            pb3Bottom.BackgroundImage = images[(pos3+1+1) % len];
             pos3 = (pos3 + 1) % images.Length;
         }
         private void StartButton_Click(object sender, EventArgs e)
@@ -115,6 +124,7 @@ namespace FruitMachine
             { 
                 spin = true; box1 = true; box2 = true; box3 = true;// Resets everything and lets you spin again
                 checkWin();
+                refreshBoxes();
             }
         }
 
@@ -145,6 +155,14 @@ namespace FruitMachine
                     
             }
             textBox1.Enabled = true;
+        }
+        private void refreshBoxes()
+        {
+            Random random = new Random();
+            pos1 = random.Next(len);
+            pos2 = (random.Next(len)+2)%len;
+            pos3 = random.Next(len);
+
         }
     }
 }
