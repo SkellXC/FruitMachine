@@ -54,18 +54,22 @@ namespace FruitMachine
         static bool box2 = true;
         static bool box3 = true;
 
-        public Form1() { InitializeComponent();}
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
+        public Form1() 
+        { 
+            InitializeComponent();
+            
         }
+
+        private void Form1_Load(object sender, EventArgs e) {}
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            pictureBox1.BackgroundImage = images[pos1];// Middle one
+            
 
             pb1Top.BackgroundImage = images[((pos1 ==0)? len : pos1)-1];// Top one
             //sets the index to the last item when pos1 is the first item
+
+            pictureBox1.BackgroundImage = images[pos1];// Middle one                                      ......
 
             pb1Bottom.BackgroundImage = images[(pos1 + 1) % len];// Bottom one
             pos1 = (pos1 + 1) % images.Length;// Increments it
@@ -73,35 +77,40 @@ namespace FruitMachine
 
         private void timer2_Tick(object sender, EventArgs e)
         {
-
-            pictureBox2.BackgroundImage = images[(pos2 + 1) % len];// Middle
-
+            
             pb2Top.BackgroundImage = images[((pos2 +1) == 0) ? len : (pos2+1) - 1];// Top
+            pictureBox2.BackgroundImage = images[(pos2 + 1) % len];// Middle                               ......
             pb2Bottom.BackgroundImage = images[(pos2 + 1 + 1) % len];// Bottom
 
             pos2 = (pos2 + 1) % images.Length;
         }
         private void timer3_Tick(object sender, EventArgs e)
         {
-            pictureBox3.BackgroundImage = images[(pos3 + 1) % len];//Middle
-            pb3Top.BackgroundImage = images[((pos3+ 1 == 0) ? len : pos3+1) - 1];// Top
-            pb3Bottom.BackgroundImage = images[(pos3+1+1) % len];
+            
+            pb3Top.BackgroundImage = images[((pos3 + 1) == 0) ? len : (pos3+1) - 1];// Top
+            pictureBox3.BackgroundImage = images[(pos3 + 1) % len];//Middle                                ......
+            pb3Bottom.BackgroundImage = images[(pos3+1+1) % len];// Bottom
+
             pos3 = (pos3 + 1) % images.Length;
         }
         private void StartButton_Click(object sender, EventArgs e)
         {
             if ((box1))// If box1 is spinning then this can stop it
             { 
-            timer1.Enabled = false;//!(timer1.Enabled);
+                timer1.Enabled = false;
+                box1 = false;
             }
 
-            box1 = false;
+            
         }
         private void button1_Click(object sender, EventArgs e)
         {
             if ((box2))// If box1 is spinning then this can stop it  { timer2.Enabled = false; }
+            { 
                 timer2.Enabled = false;
-            box2 = false;
+                box2 = false;
+            }
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -124,8 +133,12 @@ namespace FruitMachine
             { 
                 spin = true; box1 = true; box2 = true; box3 = true;// Resets everything and lets you spin again
                 checkWin();
-                refreshBoxes();
+                //refreshBoxes();
             }
+            label5.Text = pos1.ToString();
+            label7.Text = pos2.ToString();
+            label8.Text = pos3.ToString();
+
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -150,9 +163,7 @@ namespace FruitMachine
             bool oneThree = pos1 == (pos3 + 1);
             if (oneTwo && twoThree && oneThree)
             {
-                // MessageBox.Show("You win");
                 gold += Int32.Parse(textBox1.Text) * 3;
-                    
             }
             textBox1.Enabled = true;
         }
