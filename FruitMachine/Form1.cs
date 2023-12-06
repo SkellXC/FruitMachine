@@ -104,7 +104,7 @@ namespace FruitMachine
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            if ((box2))// If box1 is spinning then this can stop it  { timer2.Enabled = false; }
+            if ((box2))// If box1 is spinning then this can stop it
             { 
                 timer2.Enabled = false;
                 box2 = false;
@@ -132,11 +132,11 @@ namespace FruitMachine
             { 
                 spin = true; box1 = true; box2 = true; box3 = true;// Resets everything and lets you spin again
                 checkWin();
-                //refreshBoxes();
+                refreshBoxes();
             }
             label5.Text = pos1.ToString();
-            label7.Text = (pos2+1).ToString();
-            label8.Text = (pos3+1).ToString();
+            label7.Text = (pos2).ToString();
+            label8.Text = (pos3).ToString();
 
         }
 
@@ -159,12 +159,16 @@ namespace FruitMachine
         {
             bool oneTwo = pos1 == (pos2 + 1);
             bool twoThree = pos2 == pos3;
-            bool oneThree = pos1 == ((pos3 + 1)%len);
-            bool lastOneThree = pos1 == 0 && pos3+1 == 7;// Doesn't work. Last one for box3 is 6/7 and the first box would be 0
-            if (oneTwo && twoThree && (oneThree || lastOneThree))
+            bool oneThree = pos1 == ((pos3 +1)%len);
+            if (oneTwo && twoThree && (oneThree))
             {
                 gold += Int32.Parse(textBox1.Text) * 3;
             }
+            else if (oneTwo || twoThree || oneThree)
+            {
+                gold += (int)(Int32.Parse(textBox1.Text) * 1.5);
+            }
+            
             textBox1.Enabled = true;
         }
         private void refreshBoxes()
@@ -174,6 +178,22 @@ namespace FruitMachine
             pos2 = (random.Next(len)+2)%len;
             pos3 = random.Next(len);
 
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            if (gold > 0 && spin)
+            {
+                textBox1.Enabled = false;// Disables teh textbox
+                goldLabel.Text = gold.ToString();
+                gold -= Int32.Parse(textBox1.Text);
+                timer1.Enabled = true;// Spins everything
+                timer2.Enabled = true;
+                timer3.Enabled = true;
+                spin = false;// Doesn't let you spin again
+
+            }
+            else { MessageBox.Show("You have no money left"); }
         }
     }
 }

@@ -50,7 +50,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.goldLabel = new System.Windows.Forms.Label();
             this.balanceText = new System.Windows.Forms.Label();
-            this.Spin = new System.Windows.Forms.Button();
             this.pb2Top = new System.Windows.Forms.PictureBox();
             this.pb3Top = new System.Windows.Forms.PictureBox();
             this.pb2Bottom = new System.Windows.Forms.PictureBox();
@@ -58,6 +57,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -67,6 +67,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pb3Top)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb2Bottom)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb3Bottom)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // StartButton
@@ -85,6 +86,7 @@
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.BackgroundImage = global::FruitMachine.Resource1.tile190;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox1.Location = new System.Drawing.Point(366, 199);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(150, 150);
@@ -96,6 +98,7 @@
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.BackgroundImage = global::FruitMachine.Resource1.tile190;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox2.Location = new System.Drawing.Point(692, 199);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(150, 150);
@@ -107,6 +110,7 @@
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.BackgroundImage = global::FruitMachine.Resource1.tile190;
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox3.InitialImage = global::FruitMachine.Resource1.tile000;
             this.pictureBox3.Location = new System.Drawing.Point(1007, 199);
             this.pictureBox3.Name = "pictureBox3";
@@ -143,6 +147,7 @@
             this.pb1Top.BackColor = System.Drawing.Color.Transparent;
             this.pb1Top.BackgroundImage = global::FruitMachine.Resource1.tile070;
             this.pb1Top.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pb1Top.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pb1Top.Location = new System.Drawing.Point(366, 12);
             this.pb1Top.Name = "pb1Top";
             this.pb1Top.Size = new System.Drawing.Size(150, 150);
@@ -163,6 +168,7 @@
             this.pb1Bottom.BackColor = System.Drawing.Color.Transparent;
             this.pb1Bottom.BackgroundImage = global::FruitMachine.Resource1.tile009;
             this.pb1Bottom.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pb1Bottom.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pb1Bottom.Location = new System.Drawing.Point(366, 388);
             this.pb1Bottom.Name = "pb1Bottom";
             this.pb1Bottom.Size = new System.Drawing.Size(150, 150);
@@ -259,23 +265,12 @@
             this.balanceText.TabIndex = 20;
             this.balanceText.Text = "Balance:";
             // 
-            // Spin
-            // 
-            this.Spin.BackColor = System.Drawing.Color.Transparent;
-            this.Spin.Location = new System.Drawing.Point(63, 504);
-            this.Spin.MinimumSize = new System.Drawing.Size(200, 100);
-            this.Spin.Name = "Spin";
-            this.Spin.Size = new System.Drawing.Size(200, 100);
-            this.Spin.TabIndex = 21;
-            this.Spin.Text = "Spin";
-            this.Spin.UseVisualStyleBackColor = false;
-            this.Spin.Click += new System.EventHandler(this.button3_Click);
-            // 
             // pb2Top
             // 
             this.pb2Top.BackColor = System.Drawing.Color.Transparent;
             this.pb2Top.BackgroundImage = global::FruitMachine.Resource1.tile070;
             this.pb2Top.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pb2Top.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pb2Top.Location = new System.Drawing.Point(692, 12);
             this.pb2Top.Name = "pb2Top";
             this.pb2Top.Size = new System.Drawing.Size(150, 150);
@@ -287,6 +282,7 @@
             this.pb3Top.BackColor = System.Drawing.Color.Transparent;
             this.pb3Top.BackgroundImage = global::FruitMachine.Resource1.tile070;
             this.pb3Top.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pb3Top.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pb3Top.Location = new System.Drawing.Point(1007, 12);
             this.pb3Top.Name = "pb3Top";
             this.pb3Top.Size = new System.Drawing.Size(150, 150);
@@ -298,6 +294,7 @@
             this.pb2Bottom.BackColor = System.Drawing.Color.Transparent;
             this.pb2Bottom.BackgroundImage = global::FruitMachine.Resource1.tile009;
             this.pb2Bottom.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pb2Bottom.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pb2Bottom.Location = new System.Drawing.Point(692, 388);
             this.pb2Bottom.Name = "pb2Bottom";
             this.pb2Bottom.Size = new System.Drawing.Size(150, 150);
@@ -309,6 +306,7 @@
             this.pb3Bottom.BackColor = System.Drawing.Color.Transparent;
             this.pb3Bottom.BackgroundImage = global::FruitMachine.Resource1.tile009;
             this.pb3Bottom.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pb3Bottom.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pb3Bottom.Location = new System.Drawing.Point(1007, 388);
             this.pb3Bottom.Name = "pb3Bottom";
             this.pb3Bottom.Size = new System.Drawing.Size(150, 150);
@@ -342,6 +340,18 @@
             this.label8.TabIndex = 28;
             this.label8.Text = "label8";
             // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox4.BackgroundImage")));
+            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox4.Location = new System.Drawing.Point(63, 494);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(200, 193);
+            this.pictureBox4.TabIndex = 29;
+            this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -349,6 +359,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1338, 715);
+            this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label5);
@@ -356,7 +367,6 @@
             this.Controls.Add(this.pb2Bottom);
             this.Controls.Add(this.pb3Top);
             this.Controls.Add(this.pb2Top);
-            this.Controls.Add(this.Spin);
             this.Controls.Add(this.balanceText);
             this.Controls.Add(this.goldLabel);
             this.Controls.Add(this.label4);
@@ -389,6 +399,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pb3Top)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb2Bottom)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb3Bottom)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -416,7 +427,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label goldLabel;
         private System.Windows.Forms.Label balanceText;
-        private System.Windows.Forms.Button Spin;
         private System.Windows.Forms.PictureBox pb2Top;
         private System.Windows.Forms.PictureBox pb3Top;
         private System.Windows.Forms.PictureBox pb2Bottom;
@@ -424,6 +434,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.PictureBox pictureBox4;
     }
 }
 
