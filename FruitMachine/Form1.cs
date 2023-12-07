@@ -12,19 +12,7 @@ using System.Threading;
 using System.Reflection;
 using System.CodeDom.Compiler;
 using System.Runtime.InteropServices;
-/*Special item that when is used, slows down tick speed of other timers
- * Spend money
- * Buy upgrades (slows down tick speed minimally)
- * Different icons or backgrounds
- * History of bets
- * Figure out how to do seperate pages to allow for a main menu and other stuff. Maybe new games?
- * Hyper link to my github 
- * Calculate win rate
- * If you get multiple in a row, you get more money or you get crates
- * Shop with backgrounds 
- * Seperate enviroment that you use money to build stuff. coinmaster style 
- * Bit more far fetched. You need to raid ai bases
- */
+
 namespace FruitMachine
 {
     public partial class Form1 : Form
@@ -191,3 +179,16 @@ namespace FruitMachine
         }
     }
 }
+/*Special item that when is used, slows down tick speed of other timers
+ * Spend money
+ * Buy upgrades (slows down tick speed minimally)
+ * Different icons or backgrounds
+ * History of bets
+ * Figure out how to do seperate pages to allow for a main menu and other stuff. Maybe new games?
+ * Hyper link to my github 
+ * Calculate win rate
+ * If you get multiple in a row, you get more money or you get crates
+ * Shop with backgrounds 
+ * Seperate enviroment that you use money to build stuff. coinmaster style 
+ * Bit more far fetched. You need to raid ai bases
+ */
