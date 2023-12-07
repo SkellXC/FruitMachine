@@ -23,7 +23,6 @@ using System.Runtime.InteropServices;
  * If you get multiple in a row, you get more money or you get crates
  * Shop with backgrounds 
  * Seperate enviroment that you use money to build stuff. coinmaster style 
- * 
  * Bit more far fetched. You need to raid ai bases
  */
 namespace FruitMachine
@@ -57,15 +56,12 @@ namespace FruitMachine
         public Form1() 
         { 
             InitializeComponent();
-            
         }
 
         private void Form1_Load(object sender, EventArgs e) {}
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            
-
             pb1Top.BackgroundImage = images[((pos1 ==0)? len : pos1)-1];// Top one
             //sets the index to the last item when pos1 is the first item
 
@@ -77,7 +73,6 @@ namespace FruitMachine
 
         private void timer2_Tick(object sender, EventArgs e)
         {
-            
             pb2Top.BackgroundImage = images[((pos2 +1) == 0) ? len : (pos2+1) - 1];// Top
             pictureBox2.BackgroundImage = images[(pos2 + 1) % len];// Middle                               ......
             pb2Bottom.BackgroundImage = images[(pos2 + 1 + 1) % len];// Bottom
@@ -95,7 +90,7 @@ namespace FruitMachine
         }
         private void StartButton_Click(object sender, EventArgs e)
         {
-            if ((box1))// If box1 is spinning then this can stop it
+            if (box1)// If box1 is spinning then this stops it
             { 
                 timer1.Enabled = false;
                 box1 = false;
@@ -123,9 +118,9 @@ namespace FruitMachine
 
         private void boolcheck_Tick(object sender, EventArgs e)// Run checks in here
         {
-            label1.Text = (pos1 == pos2 + 1).ToString();// Box 1 and 2 are the same
-            label2.Text = (pos2 == pos3).ToString();// Box 2 and 3 are the same
-            label3.Text = (pos1 == pos3+1).ToString();// Box 1 and 3 are the same
+            //label1.Text = (pos1 == pos2 + 1).ToString();// Box 1 and 2 are the same
+            //label2.Text = (pos2 == pos3).ToString();// Box 2 and 3 are the same
+            //label3.Text = (pos1 == pos3+1).ToString();// Box 1 and 3 are the same
             halfTick = !halfTick;
             if (halfTick) { goldLabel.Text = gold.ToString(); }
             if(!box1 && !box2 && !box3) 
@@ -134,9 +129,9 @@ namespace FruitMachine
                 checkWin();
                 refreshBoxes();
             }
-            label5.Text = pos1.ToString();
-            label7.Text = (pos2).ToString();
-            label8.Text = (pos3).ToString();
+            //label5.Text = pos1.ToString();
+            //label7.Text = (pos2).ToString();
+            //label8.Text = (pos3).ToString();
 
         }
 
@@ -168,7 +163,6 @@ namespace FruitMachine
             {
                 gold += (int)(Int32.Parse(textBox1.Text) * 1.5);
             }
-            
             textBox1.Enabled = true;
         }
         private void refreshBoxes()
